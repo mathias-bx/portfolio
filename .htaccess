@@ -3,4 +3,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-<FilesMatch "(?i)^.*\.(jpg|jpeg|png|js|css)$">ExpiresActive OnExpiresDefault A2592000</FilesMatch>
+# Add Expire headers
+<IfModule mod_expires.c>
+<Filesmatch "\.(jpg|jpeg|png|gif|js|css|swf|ico|woff|mp3)$">
+  ExpiresActive on
+  ExpiresDefault "access plus 30 days"
+</Filesmatch>
+</IfModule>
