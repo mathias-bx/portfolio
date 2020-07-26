@@ -1,5 +1,5 @@
 body {
-  font-family: "Bitter", "Cambria", "Times New Roman", serif;
+  font-family: Bitter, Cambria, serif;
   color: #444444;
   padding: 0;
   margin: 0;
@@ -7,30 +7,38 @@ body {
   font-style: normal;
   font-size: 14.5px;
 }
+
 ::selection {
-  background-color: #444444;
-  color: white;
+  background-color: #444;
+  color: #fff;
 }
 
 a {
   text-decoration: underline;
   color: #ef8a13;
   cursor: pointer;
+
   &:hover {
     color: #ff9c27;
     text-decoration: none;
+
     &:active {
       color: #e77e04;
     }
   }
+
   img {
+    -webkit-transition: all 0.1s;
     transition: all 0.1s;
-  }
-  img:hover {
-    opacity: 0.9;
-    transition: all 0.1s;
-    &:hover:active {
-      opacity: 1;
+
+    &:hover {
+      opacity: 0.9;
+      -webkit-transition: all 0.1s;
+      transition: all 0.1s;
+
+      &:hover:active {
+        opacity: 1;
+      }
     }
   }
 }
@@ -43,8 +51,10 @@ p {
 h1 {
   font-weight: 600;
   font-size: 24px;
+
   a {
     text-decoration: none;
+
     &:hover {
       text-decoration: none;
     }
@@ -55,12 +65,17 @@ h2 {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 8px;
+
   a {
     text-decoration: none;
     color: inherit;
-    &:hover,
-    &:hover:active {
+
+    &:hover {
       color: inherit;
+
+      &:active {
+        color: inherit;
+      }
     }
   }
 }
@@ -76,14 +91,17 @@ h6 {
   font-weight: 400;
   color: #a5a5a5;
   line-height: 180%;
+  -ms-flex-item-align: end;
   align-self: flex-end;
 }
+
 ul {
-  padding-left: 20px;
+  padding-left: 30px;
+  margin-top: -8px;
 }
+
 li {
   margin-bottom: 8px;
-  list-style: none;
 }
 
 footer {
@@ -99,14 +117,13 @@ footer {
   }
 }
 
-.header {
-  h1 {
-    margin-top: 260px;
-  }
-  @media (max-width: 992px) {
-    h1 {
-      margin-top: 20px;
-    }
+.header h1 {
+  margin-top: 260px;
+}
+
+@media (max-width: 992px) {
+  .header h1 {
+    margin-top: 20px;
   }
 }
 
@@ -145,11 +162,6 @@ footer {
 }
 
 /** responsive */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 935px;
-  }
-}
 
 @media (min-width: 992px) {
   .myself {
@@ -162,6 +174,7 @@ footer {
   h1 {
     font-size: 22px;
   }
+
   body {
     font-size: 16px;
   }
@@ -170,20 +183,26 @@ footer {
 .navigation {
   font-size: 14px;
   margin-top: 12px;
+
   p {
     margin-bottom: 0;
   }
+
   .logo {
     font-weight: bold;
     text-decoration: none;
     font-size: 16px;
     color: #ef8a13;
+
     &:hover {
       text-decoration: underline;
       color: #ef8a13;
     }
   }
+
   a:hover {
     text-decoration: none;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
