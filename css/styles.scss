@@ -34,7 +34,7 @@ a {
     transition: all 0.1s;
 
     &:hover {
-      opacity: 0.9;
+      opacity: 0.8;
       -webkit-transition: all 0.1s;
       transition: all 0.1s;
 
@@ -53,6 +53,7 @@ p {
 h1 {
   font-weight: 600;
   font-size: 26px;
+  line-height: 135%;
 
   a {
     text-decoration: none;
