@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
 body {
-  font-family: Bitter, Cambria, serif;
-  color: #444444;
+  font-family: Roboto Slab, Cambria, serif;
+  color: #444;
   padding: 0;
   margin: 0;
   font-weight: normal;
   font-style: normal;
-  font-size: 14.5px;
+  font-size: 16px;
 }
 
 ::selection {
@@ -50,7 +52,7 @@ p {
 
 h1 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 26px;
 
   a {
     text-decoration: none;
@@ -81,7 +83,7 @@ h2 {
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 
