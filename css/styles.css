@@ -70,7 +70,7 @@ h1 a:hover {
 
 h2 {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 8px;
 }
 
@@ -90,6 +90,7 @@ h2 a:hover:active {
 h4 {
   font-size: 18px;
   font-weight: 600;
+  margin-top: 24px;
 }
 
 h6 {
@@ -97,7 +98,7 @@ h6 {
   font-style: italic;
   font-weight: 400;
   color: #a5a5a5;
-  line-height: 180%;
+  line-height: 200%;
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
