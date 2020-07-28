@@ -110,25 +110,38 @@ li {
   margin-bottom: 8px;
 }
 
+.navigation {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.navigation p {
+  margin-bottom: 0;
+}
+
+.navigation .logo {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ef8a13;
+}
+
+.navigation .logo:hover {
+  text-decoration: underline;
+  color: #ef8a13;
+}
+
+.navigation a:hover {
+  text-decoration: none;
+}
+
 footer p,
 footer a {
   font-size: 14px;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
 .header h1 {
   margin-top: 260px;
-}
-
-@media (max-width: 992px) {
-  .header h1 {
-    margin-top: 20px;
-  }
 }
 
 .hr-sm {
@@ -138,10 +151,6 @@ footer a {
   margin-left: 0;
   margin-top: 0;
   border-radius: 2px;
-}
-
-.ft-13 {
-  font-size: 13px;
 }
 
 .mbx_menu h1 {
@@ -166,6 +175,21 @@ footer a {
 }
 
 /** responsive */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header h1 {
+    margin-top: 20px;
+  }
+  .myself {
+    width: 200px;
+  }
+}
+
 @media (min-width: 992px) {
   .myself {
     position: relative;
@@ -180,30 +204,5 @@ footer a {
   body {
     font-size: 16px;
   }
-}
-
-.navigation {
-  font-size: 14px;
-  margin-top: 12px;
-}
-
-.navigation p {
-  margin-bottom: 0;
-}
-
-.navigation .logo {
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 16px;
-  color: #ef8a13;
-}
-
-.navigation .logo:hover {
-  text-decoration: underline;
-  color: #ef8a13;
-}
-
-.navigation a:hover {
-  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */
