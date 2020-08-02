@@ -1,4 +1,4 @@
-# Mathias Bx - Portfolio
+### Mathias Bx - Portfolio
 
 Here's my portfolio as a Product Designer. I'm currently working remotely for Echobox.
 
