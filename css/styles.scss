@@ -7,6 +7,7 @@ body {
   font-family: Roboto Slab, Cambria, serif;
   color: #444;
   font-size: 16px;
+  line-height: 165%;
 }
 
 ::selection {
@@ -98,7 +99,6 @@ a {
 
 p {
   font-weight: 400;
-  line-height: 165%;
   margin-bottom: 16px;
   margin-top: 0;
 }
