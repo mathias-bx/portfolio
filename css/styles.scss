@@ -269,9 +269,6 @@ footer {
 
 // Content Layout Design
 
-.content {
-}
-
 .content-1 {
   display: grid;
   grid-template-columns: 1fr;
@@ -281,7 +278,7 @@ footer {
 .content-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
+  grid-gap: 20px;
 
   .content {
     padding-right: 20px;
