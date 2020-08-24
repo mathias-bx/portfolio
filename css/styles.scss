@@ -4,7 +4,7 @@ body {
   margin: 0 auto 48px;
   padding: 20px;
   box-sizing: border-box;
-  font-family: Roboto Slab, Cambria, serif;
+  font-family: Noto Sans JP, sans-serif;
   color: #444;
   font-size: 16px;
   line-height: 165%;
@@ -19,9 +19,11 @@ h1 {
   font-weight: 600;
   font-size: 26px;
   line-height: 135%;
+  letter-spacing: -.5px;
 
   a {
     text-decoration: none;
+    font-weight: inherit;
 
     &:hover {
       text-decoration: none;
@@ -38,6 +40,7 @@ h2 {
   a {
     text-decoration: none;
     color: inherit;
+    font-weight: inherit;
 
     &:hover {
       color: inherit;
@@ -71,14 +74,12 @@ a {
   color: #ef8a13;
   cursor: pointer;
   font-weight: 500;
+  transition: color .15s;
 
   &:hover {
-    color: #da7a07;
-    text-decoration: underline;
-
-    &:active {
-      color: #e77e04;
-    }
+    color: #222;
+    transition: color .15s;
+    text-decoration: none;
   }
 
   img {
@@ -101,10 +102,15 @@ p {
   font-weight: 400;
   margin-bottom: 16px;
   margin-top: 0;
+
+  a {
+    font-weight: 500;
+  }
 }
 
 ul {
   line-height: 135%;
+
   li {
     margin-bottom: 16px;
   }
