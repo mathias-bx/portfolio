@@ -177,6 +177,7 @@ ol li::before {
 
 .row {
 
+  &--0,
   &--xs,
   &--sm,
   &--md,
@@ -184,6 +185,10 @@ ol li::before {
   &--xl {
     display: grid;
     grid: auto/minmax(0, 1fr);
+  }
+
+  &--0 {
+    grid-gap: 0;
   }
 
   &--xs {
@@ -219,9 +224,14 @@ ol li::before {
   h5 {
     color: $colorOrange;
   }
+
+  svg {
+    color: $colorOrange;
+  }
 }
 
 .highlight--purple {
+
   h3::before {
     background-color: $colorPurple;
   }
@@ -231,6 +241,10 @@ ol li::before {
   }
 
   h5 {
+    color: $colorPurple;
+  }
+
+  svg {
     color: $colorPurple;
   }
 }
@@ -257,6 +271,10 @@ a {
 .btn-container {
   display: flex;
   margin-left: 16px;
+
+  .btn:not(:first-of-type) {
+    margin-left: 10px;
+  }
 }
 
 .btn {
@@ -266,7 +284,7 @@ a {
   font-weight: 500;
   cursor: pointer;
   letter-spacing: .5px;
-  padding: 4px 0 6px;
+  padding: 4px 16px 6px;
   transition: background-color .15s;
 
   &:hover {
@@ -302,12 +320,6 @@ a {
       transition: color .15s;
     }
   }
-
-  &--arrow {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
 }
 
 .link {
@@ -339,8 +351,8 @@ a {
   margin: auto;
   z-index: 2;
   position: relative;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
 
   &--sm {
     margin-top: 20px;
@@ -361,27 +373,24 @@ a {
     margin-top: 192px;
     margin-bottom: 192px;
   }
-}
-
-.section-casestudy {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.subsection {
 
   &__copy {
-    padding-right: 80px;
+    padding-right: 64px;
   }
 
   &__list {
-    margin-left: 20px;
+    margin-left: 16px;
     padding-right: 16px;
   }
 
   &__listitem {
     margin-bottom: 8px;
   }
+}
+
+.section-casestudy {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .navbar {
@@ -409,8 +418,9 @@ a {
   }
 }
 
-.sectionhero {
-  margin-top: 140px;
+.section-hero {
+  margin-top: 120px;
+  margin-bottom: 40px;
 
   &__title {
     font-weight: 700;
@@ -439,21 +449,13 @@ a {
       max-width: 320px;
     }
   }
-
-  &__buttons {
-    padding-left: 16px;
-
-    .btn:not(:first-of-type) {
-      margin-left: 16px;
-    }
-  }
 }
 
 .introduction {
   margin-top: 96px;
 }
 
-.casestudy {
+.case-study-preview {
 
   &__imagebox {
     position: relative;
@@ -465,12 +467,15 @@ a {
     margin: auto;
 
     & img {
+      width: 100%;
       max-width: 100%;
       transition: all 0.25s;
       display: block;
       width: 100%;
       height: auto;
       transform: scale(1);
+      height: 315px;
+      object-fit: cover;
     }
 
     &:hover img {
@@ -478,6 +483,7 @@ a {
       cursor: pointer;
     }
   }
+
 }
 
 .list {
@@ -532,22 +538,27 @@ a {
   &--purple {
     li {
       &::before {
-        background-image: url(../images/list-style-round.svg);
+        background-image: url(../images/list-style-round-purple.svg);
+      }
+    }
+  }
+
+  &--orange {
+    li {
+      &::before {
+        background-image: url(../images/list-style-round-orange.svg);
       }
     }
   }
 
 }
 
-.header {
+.header-home {
   position: relative;
   height: 100%;
-
-  &--home {
-    padding-bottom: 180px;
-    overflow: hidden;
-    margin-bottom: -34px;
-  }
+  padding-bottom: 100px;
+  overflow: hidden;
+  margin-bottom: -34px;
 
   &__background {
     position: absolute;
@@ -572,7 +583,7 @@ a {
     max-width: 400px;
     justify-self: end;
     position: relative;
-    top: 160px;
+    top: 80px;
   }
 }
 
@@ -592,13 +603,6 @@ a {
 .footer {
   position: relative;
   height: 100%;
-
-  &--home {
-    overflow: hidden;
-    padding-top: 256px;
-    margin-top: -64px;
-    margin-bottom: 0;
-  }
 
   &__background {
     position: absolute;
@@ -623,17 +627,27 @@ a {
 
   &__navbar {
     margin-top: 192px;
-    margin-bottom: 34px;
   }
+}
+
+.footer-home {
+  overflow: hidden;
+  padding-top: 256px;
+  margin-top: -64px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 1024px) {
   .section {
-    margin-left: 16px;
-    margin-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &__copy {
+      padding-right: 40px;
+    }
   }
 
-  .sectionhero {
+  .section-hero {
 
     &__title {
       font-size: 42px;
@@ -664,13 +678,7 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .header--home {
-    padding-bottom: 96px;
-
-
-  }
-
-  .header {
+  .header-home {
     &__image {
       display: none;
     }
@@ -681,7 +689,12 @@ a {
     margin-top: 34px;
   }
 
-  .sectionhero {
+
+  .footer-home {
+    padding-top: 200px;
+  }
+
+  .section-hero {
     grid-template-columns: 1fr;
     margin-top: 80px;
 
@@ -694,7 +707,7 @@ a {
     }
   }
 
-  .subsection__copy {
+  .section__copy {
     padding-right: 16px;
   }
 }
