@@ -1,11 +1,12 @@
 $colorOrange:#FF9C27;
 $colorPurple:#9891FB;
+$colorLightGrey:#ebebee;
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Noto Sans JP, sans-serif;
+  font-family: Roboto, Noto Sans JP, sans-serif;
   font-size: 16px;
   line-height: 165%;
   color: #383E4E;
@@ -45,6 +46,9 @@ h2 {
   color: #232538;
   line-height: 135%;
   letter-spacing: -0.8px;
+  text-transform: uppercase;
+  font-family: Khand, Roboto;
+  letter-spacing: .5px;
 }
 
 h3 {
@@ -53,6 +57,9 @@ h3 {
   position: relative;
   color: #232538;
   letter-spacing: -0.5px;
+  text-transform: uppercase;
+  font-family: Khand, Roboto;
+  letter-spacing: .5px;
 
   &::before {
     background-color: $colorOrange;
@@ -70,6 +77,8 @@ h4 {
   font-weight: 700;
   position: relative;
   color: #232538;
+  text-transform: uppercase;
+  letter-spacing: .3px;
 
   &::before {
     background-color: $colorOrange;
@@ -84,6 +93,7 @@ h4 {
 
 h5 {
   font-size: 17px;
+  text-transform: uppercase;
 
   &--orange {
     color: $colorOrange;
@@ -284,7 +294,7 @@ a {
   font-weight: 500;
   cursor: pointer;
   letter-spacing: .5px;
-  padding: 4px 16px 6px;
+  padding: 6px 16px 5px;
   transition: background-color .15s;
 
   &:hover {
@@ -355,23 +365,23 @@ a {
   padding-right: 16px;
 
   &--sm {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   &--md {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   &--lg {
-    margin-top: 96px;
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 
   &--xl {
-    margin-top: 192px;
-    margin-bottom: 192px;
+    padding-top: 192px;
+    padding-bottom: 192px;
   }
 
   &__copy {
@@ -385,6 +395,34 @@ a {
 
   &__listitem {
     margin-bottom: 8px;
+  }
+  &::after {
+    content: "";
+    border-left: 1px solid $colorLightGrey;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 5px;
+    z-index: -1;
+    left: 16px;
+  }
+  &--border-0 {
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.section-border {
+  position: relative;
+  &::after {
+    content: "";
+    border-left: 1px solid $colorLightGrey;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 5px;
+    z-index: -1;
   }
 }
 
@@ -425,15 +463,17 @@ a {
   &__title {
     font-weight: 700;
     font-size: 52px;
-    line-height: 135%;
-    letter-spacing: -1px;
+    line-height: 110%;
+    letter-spacing: .5px;
     color: #232538;
+    text-transform: uppercase;
+    font-family: Khand, Roboto;
   }
 
   &__copy {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 160%;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.2px;
     color: #383E4E;
 
   }
@@ -461,6 +501,8 @@ a {
 
 .introduction {
   margin-top: 96px;
+  padding-top: 0;
+
 }
 
 .case-study-preview {
@@ -629,19 +671,37 @@ a {
   &__content {
     z-index: 1;
     position: relative;
-    margin-top: 120px;
+    padding-top: 320px;
   }
 
   &__navbar {
-    margin-top: 192px;
+    padding-top: 192px;
   }
 }
 
 .footer-home {
   overflow: hidden;
-  padding-top: 256px;
-  margin-top: -64px;
   margin-bottom: 0;
+}
+
+.detail {
+  &--1 {
+    border-top: 1px solid rgba(120,120,120,0.2);
+    z-index: -1;
+    margin-left: 16px;
+    margin-right: 16px;
+    position: relative;
+    padding-bottom: 20px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      background-color: $colorLightGrey;
+    }
+  }
+
 }
 
 @media (max-width: 1024px) {
