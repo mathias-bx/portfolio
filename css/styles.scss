@@ -1,6 +1,6 @@
-$colorOrange:#FF9C27;
-$colorPurple:#9891FB;
-$colorLightGrey:#ebebee;
+$colorOrange: #ff9c27;
+$colorPurple: #9891fb;
+$colorLightGrey: #ebebee;
 
 body {
   margin: 0;
@@ -9,7 +9,7 @@ body {
   font-family: Roboto, Noto Sans JP, sans-serif;
   font-size: 16px;
   line-height: 165%;
-  color: #383E4E;
+  color: #383e4e;
 }
 
 ::selection {
@@ -48,7 +48,7 @@ h2 {
   letter-spacing: -0.8px;
   text-transform: uppercase;
   font-family: Khand, Roboto;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 h3 {
@@ -59,15 +59,15 @@ h3 {
   letter-spacing: -0.5px;
   text-transform: uppercase;
   font-family: Khand, Roboto;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 
   &::before {
     background-color: $colorOrange;
-    content: "";
+    content: '';
     width: 1px;
     position: absolute;
     left: 0;
-    top: 5px;
+    top: 3px;
     height: 18px;
   }
 }
@@ -78,15 +78,15 @@ h4 {
   position: relative;
   color: #232538;
   text-transform: uppercase;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
 
   &::before {
     background-color: $colorOrange;
-    content: "";
+    content: '';
     width: 1px;
     position: absolute;
     left: 0;
-    top: 6px;
+    top: 5px;
     height: 14px;
   }
 }
@@ -102,17 +102,17 @@ h5 {
 
 p {
   font-size: 16px;
-  letter-spacing: .075px;
+  letter-spacing: 0.075px;
 }
 
 a {
   color: $colorOrange;
   font-weight: 500;
-  transition: color .15s;
+  transition: color 0.15s;
 
   &:hover {
     color: #232538;
-    transition: color .15s;
+    transition: color 0.15s;
   }
 }
 
@@ -137,11 +137,11 @@ ol li::before {
   height: var(--size);
   top: 2px;
   background: rgba(239, 138, 19, 0.2);
-  border-radius: 50%;
+  border-radius: 0;
   text-align: center;
 }
 
-// Grid column layout 
+// Grid column layout
 
 .col-1-1-1-1 {
   display: grid;
@@ -186,7 +186,6 @@ ol li::before {
 // Grid row Layout
 
 .row {
-
   &--0,
   &--xs,
   &--sm,
@@ -241,7 +240,6 @@ ol li::before {
 }
 
 .highlight--purple {
-
   h3::before {
     background-color: $colorPurple;
   }
@@ -293,14 +291,64 @@ a {
   text-decoration: none;
   font-weight: 500;
   cursor: pointer;
-  letter-spacing: .5px;
-  padding: 6px 16px 5px;
-  transition: background-color .15s;
+  letter-spacing: -0.25px;
+  padding: 11px 40px 9px;
+  transition: background-color 0.15s;
+  text-transform: uppercase;
+  position: relative;
 
   &:hover {
     color: #fff;
     background-color: #232538;
-    transition: background-color .15s;
+    transition: background-color 0.15s;
+  }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: #fff;
+    bottom: 0;
+    right: 0;
+  }
+  &--primary {
+    position: relative;
+    padding: 6px;
+    &::before {
+      border: 1px solid rgb(236, 232, 225);
+      border-bottom: 0;
+      content: '';
+      display: block;
+      position: absolute;
+      height: calc(50% - 8px);
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+    &::after {
+      border: 1px solid rgb(236, 232, 225);
+      border-top: 0;
+      content: '';
+      display: block;
+      position: absolute;
+      height: calc(50% - 8px);
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
   }
 
   &__arrow {
@@ -310,24 +358,21 @@ a {
   &--orange {
     color: #fff;
     background-color: $colorOrange;
-    border-radius: 20px;
   }
 
   &--purple {
     color: #fff;
     background-color: $colorPurple;
-    border-radius: 20px;
   }
 
   &--transparent {
     color: $colorOrange;
-    transition: color .15s;
-
+    transition: color 0.15s;
 
     &:hover {
       background-color: transparent;
       color: #232538;
-      transition: color .15s;
+      transition: color 0.15s;
     }
   }
 }
@@ -335,14 +380,14 @@ a {
 .link {
   font-weight: 500;
   text-decoration: none;
-  transition: color .15s;
+  transition: color 0.15s;
 
   &--orange {
     color: $colorOrange;
 
     &:hover {
       color: #232538;
-      transition: color .15s;
+      transition: color 0.15s;
     }
   }
 
@@ -351,7 +396,7 @@ a {
 
     &:hover {
       color: $colorOrange;
-      transition: color .15s;
+      transition: color 0.15s;
     }
   }
 }
@@ -365,23 +410,23 @@ a {
   padding-right: 16px;
 
   &--sm {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   &--md {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   &--lg {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    margin-top: 96px;
+    margin-bottom: 96px;
   }
 
   &--xl {
-    padding-top: 192px;
-    padding-bottom: 192px;
+    margin-top: 192px;
+    margin-bottom: 192px;
   }
 
   &__copy {
@@ -396,33 +441,8 @@ a {
   &__listitem {
     margin-bottom: 8px;
   }
-  &::after {
-    content: "";
-    border-left: 1px solid $colorLightGrey;
-    display: block;
-    position: absolute;
-    height: 100%;
-    top: 5px;
-    z-index: -1;
-    left: 16px;
-  }
-  &--border-0 {
-    &::after {
-      content: none;
-    }
-  }
-}
-
-.section-border {
-  position: relative;
-  &::after {
-    content: "";
-    border-left: 1px solid $colorLightGrey;
-    display: block;
-    position: absolute;
-    height: 100%;
-    top: 5px;
-    z-index: -1;
+  &__header-detail {
+    display: flex;
   }
 }
 
@@ -445,7 +465,6 @@ a {
     padding-right: 12px;
   }
 
-
   &__links {
     justify-self: end;
     text-align: right;
@@ -464,7 +483,7 @@ a {
     font-weight: 700;
     font-size: 52px;
     line-height: 110%;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     color: #232538;
     text-transform: uppercase;
     font-family: Khand, Roboto;
@@ -474,8 +493,7 @@ a {
     font-size: 18px;
     line-height: 160%;
     letter-spacing: 0.2px;
-    color: #383E4E;
-
+    color: #383e4e;
   }
 
   &__img {
@@ -502,17 +520,16 @@ a {
 .introduction {
   margin-top: 96px;
   padding-top: 0;
-
 }
 
 .case-study-preview {
-
   &__imagebox {
     position: relative;
     margin: auto;
     overflow: hidden;
     width: 100%;
-    box-shadow: 0px 24px 48px -24px rgba(0, 0, 0, 0.2), 0px 40px 80px -16px rgba(73, 73, 73, 0.15);
+    box-shadow: 0px 24px 48px -24px rgba(0, 0, 0, 0.2),
+      0px 40px 80px -16px rgba(73, 73, 73, 0.15);
     border-radius: 5px;
     margin: auto;
 
@@ -535,7 +552,6 @@ a {
 }
 
 .list {
-
   &__check {
     list-style: none;
     margin: 0;
@@ -577,7 +593,7 @@ a {
       width: 16px;
       height: 16px;
       left: -22px;
-      top: 6px;
+      top: 4px;
       position: absolute;
       background-repeat: no-repeat;
     }
@@ -598,7 +614,6 @@ a {
       }
     }
   }
-
 }
 
 .header-home {
@@ -636,14 +651,13 @@ a {
 }
 
 .headercasestudy {
-
   &__section {
     margin-top: 16px;
-
   }
 
   &__image {
-    box-shadow: 0px 24px 48px -24px rgba(0, 0, 0, 0.2), 0px 40px 80px -16px rgba(73, 73, 73, 0.15);
+    box-shadow: 0px 24px 48px -24px rgba(0, 0, 0, 0.2),
+      0px 40px 80px -16px rgba(73, 73, 73, 0.15);
     border-radius: 4px;
   }
 }
@@ -686,22 +700,42 @@ a {
 
 .detail {
   &--1 {
-    border-top: 1px solid rgba(120,120,120,0.2);
+    border-top: 1px solid $colorLightGrey;
     z-index: -1;
     margin-left: 16px;
     margin-right: 16px;
     position: relative;
     padding-bottom: 20px;
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       height: 5px;
       width: 5px;
       background-color: $colorLightGrey;
+      top: -1px;
     }
   }
-
+  &--2 {
+    border-top: 1px solid $colorLightGrey;
+    position: relative;
+    top: 4px;
+    z-index: -1;
+    margin-left: 16px;
+    margin-right: 16px;
+    position: relative;
+    flex-grow: 1;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      background-color: $colorLightGrey;
+      top: -1px;
+      right: 0;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -715,14 +749,12 @@ a {
   }
 
   .section-hero {
-
     &__title {
       font-size: 42px;
     }
   }
 
   .footer {
-
     &__content {
       margin-top: 0;
     }
@@ -730,7 +762,6 @@ a {
 }
 
 @media (max-width: 768px) {
-
   .headercasestudy {
     &__section {
       margin-top: 16px;
@@ -761,7 +792,6 @@ a {
     padding-top: 34px;
     margin-top: 34px;
   }
-
 
   .footer-home {
     padding-top: 200px;
