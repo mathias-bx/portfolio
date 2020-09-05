@@ -279,6 +279,7 @@ a {
 .btn-container {
   display: flex;
   margin-left: 16px;
+  align-items: center;
 
   .btn:not(:first-of-type) {
     margin-left: 10px;
@@ -293,38 +294,30 @@ a {
   cursor: pointer;
   letter-spacing: -0.25px;
   padding: 11px 40px 9px;
-  transition: background-color 0.15s;
   text-transform: uppercase;
   position: relative;
-
-  &:hover {
-    color: #fff;
-    background-color: #232538;
-    transition: background-color 0.15s;
-  }
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 5px;
-    width: 5px;
-    background-color: #fff;
-    top: 0;
-    left: 0;
-  }
+  overflow: hidden;
+  transition: 0.3s;
   &::after {
-    content: '';
-    display: block;
     position: absolute;
-    height: 5px;
-    width: 5px;
-    background-color: #fff;
+    transition: 0.3s;
+    content: '';
+    width: 0;
+    left: 50%;
     bottom: 0;
-    right: 0;
+    background: #232538;
+    height: 120%;
+    left: -10%;
+    transform: skewX(15deg);
+    z-index: -1;
+  }
+  &:hover::after {
+    width: 120%;
   }
   &--primary {
     position: relative;
-    padding: 6px;
+    padding: 6px 8px;
+    display: flex;
     &::before {
       border: 1px solid rgb(236, 232, 225);
       border-bottom: 0;
@@ -336,6 +329,7 @@ a {
       left: 0;
       top: 0;
       z-index: -1;
+      box-sizing: border-box;
     }
     &::after {
       border: 1px solid rgb(236, 232, 225);
@@ -348,6 +342,7 @@ a {
       left: 0;
       bottom: 0;
       z-index: -1;
+      box-sizing: border-box;
     }
   }
 
@@ -358,11 +353,13 @@ a {
   &--orange {
     color: #fff;
     background-color: $colorOrange;
+    z-index: 1;
   }
 
   &--purple {
     color: #fff;
     background-color: $colorPurple;
+    z-index: 1;
   }
 
   &--transparent {
@@ -377,6 +374,25 @@ a {
   }
 }
 
+.btn-detail {
+  content: '';
+  pointer-events: none;
+  z-index: 2;
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background-color: #fff;
+  &--1 {
+    top: 6px;
+    left: 8px;
+  }
+  &--2 {
+    bottom: 6px;
+    right: 8px;
+  }
+}
+
 .link {
   font-weight: 500;
   text-decoration: none;
@@ -384,7 +400,6 @@ a {
 
   &--orange {
     color: $colorOrange;
-
     &:hover {
       color: #232538;
       transition: color 0.15s;
@@ -393,7 +408,6 @@ a {
 
   &--dark {
     color: #232538;
-
     &:hover {
       color: $colorOrange;
       transition: color 0.15s;
@@ -753,12 +767,6 @@ a {
       font-size: 42px;
     }
   }
-
-  .footer {
-    &__content {
-      margin-top: 0;
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -791,6 +799,9 @@ a {
   .footer {
     padding-top: 34px;
     margin-top: 34px;
+    &__content {
+      padding-top: 0;
+    }
   }
 
   .footer-home {
