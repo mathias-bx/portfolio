@@ -269,7 +269,6 @@ img {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  border-radius: 4px;
 }
 
 a {
@@ -293,7 +292,7 @@ a {
   font-weight: 500;
   cursor: pointer;
   letter-spacing: -0.25px;
-  padding: 11px 40px 9px;
+  padding: 10px 40px 10px;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
@@ -316,7 +315,7 @@ a {
   }
   &--primary {
     position: relative;
-    padding: 6px 8px;
+    padding: 6px;
     display: flex;
     &::before {
       border: 1px solid rgb(236, 232, 225);
@@ -385,11 +384,11 @@ a {
   background-color: #fff;
   &--1 {
     top: 6px;
-    left: 8px;
+    left: 6px;
   }
   &--2 {
     bottom: 6px;
-    right: 8px;
+    right: 6px;
   }
 }
 
@@ -527,7 +526,7 @@ a {
   margin-top: 64px;
 
   &__image {
-    border: 1px solid #dee2e6;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -540,12 +539,30 @@ a {
   &__imagebox {
     position: relative;
     margin: auto;
-    overflow: hidden;
     width: 100%;
-    box-shadow: 0px 24px 48px -24px rgba(0, 0, 0, 0.2),
-      0px 40px 80px -16px rgba(73, 73, 73, 0.15);
-    border-radius: 5px;
     margin: auto;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 112px;
+      width: 112px;
+      top: -12px;
+      left: -12px;
+      z-index: -1;
+      border: 1px solid $colorLightGrey;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      bottom: -12px;
+      right: -12px;
+      z-index: -1;
+      border: 1px solid $colorLightGrey;
+    }
 
     & img {
       width: 100%;
@@ -559,7 +576,6 @@ a {
     }
 
     &:hover img {
-      transform: scale(1.1);
       cursor: pointer;
     }
   }
@@ -657,10 +673,10 @@ a {
 
   &__image {
     transform: skewY(8deg);
-    max-width: 400px;
+    max-width: 360px;
     justify-self: end;
     position: relative;
-    top: 80px;
+    top: 120px;
   }
 }
 
