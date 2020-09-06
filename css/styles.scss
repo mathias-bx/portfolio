@@ -571,17 +571,16 @@ a {
       position: absolute;
       transition: 0.3s;
       width: 0;
-      left: 50%;
       bottom: 0;
       background: rgba(35, 37, 56, 0.25);
       height: 120%;
-      left: -10%;
+      left: -20%;
       transform: skewX(15deg);
       z-index: 1;
       mix-blend-mode: multiply;
     }
     &:hover::after {
-      width: 120%;
+      width: 140%;
     }
     & img {
       width: 100%;
