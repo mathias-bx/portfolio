@@ -108,9 +108,11 @@ p {
 a {
   color: $colorOrange;
   font-weight: 500;
+  transition: color 0.1s;
 
   &:hover {
     color: #232538;
+    transition: color 0.1s;
   }
 }
 
