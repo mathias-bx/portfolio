@@ -296,7 +296,7 @@ a {
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
-  transition: 0.3s;
+  transition: background 0.3s;
   &::after {
     position: absolute;
     transition: 0.3s;
