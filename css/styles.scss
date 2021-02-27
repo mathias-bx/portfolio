@@ -680,7 +680,7 @@ a {
     width: 100%;
     height: 100%;
     // background-color: #e8eaee;
-    transform: skewY(-8deg);
+    transform: skewY(-6deg);
     transform-origin: top left;
     z-index: -1;
     align-content: end;
@@ -690,7 +690,7 @@ a {
   }
 
   &__image {
-    transform: skewY(8deg);
+    transform: skewY(6deg);
     max-width: 360px;
     justify-self: end;
     position: relative;
@@ -722,7 +722,7 @@ a {
     width: 100%;
     height: 100%;
     background-color: #e8eaee;
-    transform: skewY(-8deg);
+    transform: skewY(-6deg);
     transform-origin: bottom right;
     z-index: -1;
     background: url(../images/background-footer.svg) no-repeat center center;
