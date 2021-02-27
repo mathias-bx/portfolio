@@ -63,7 +63,7 @@ h3 {
 
   &::before {
     background-color: $colorOrange;
-    content: '';
+    content: "";
     width: 1px;
     position: absolute;
     left: 0;
@@ -82,7 +82,7 @@ h4 {
 
   &::before {
     background-color: $colorOrange;
-    content: '';
+    content: "";
     width: 1px;
     position: absolute;
     left: 0;
@@ -108,11 +108,11 @@ p {
 a {
   color: $colorOrange;
   font-weight: 500;
-  transition: color 0.1s;
+  transition: color 0.15s ease-out;
 
   &:hover {
     color: #232538;
-    transition: color 0.1s;
+    transition: color 0.15s ease-out;
   }
 }
 
@@ -296,14 +296,14 @@ a {
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
-  transition: background 0.3s;
+  transition: background 0.3s ease-out;
   &::after {
     position: absolute;
-    transition: 0.3s;
-    content: '';
+    transition: 0.3s ease-out;
+    content: "";
     width: 0;
     left: 50%;
-    bottom: 0;
+    bottom: -10%;
     background: #232538;
     height: 120%;
     left: -10%;
@@ -320,7 +320,7 @@ a {
     &::before {
       border: 1px solid rgb(236, 232, 225);
       border-bottom: 0;
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       height: calc(50% - 8px);
@@ -333,7 +333,7 @@ a {
     &::after {
       border: 1px solid rgb(236, 232, 225);
       border-top: 0;
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       height: calc(50% - 8px);
@@ -363,18 +363,18 @@ a {
 
   &--transparent {
     color: $colorOrange;
-    transition: color 0.15s;
+    transition: color 0.15s ease-out;
 
     &:hover {
       background-color: transparent;
       color: #232538;
-      transition: color 0.15s;
+      transition: color 0.15s ease-out;
     }
   }
 }
 
 .btn-detail {
-  content: '';
+  content: "";
   pointer-events: none;
   z-index: 2;
   display: block;
@@ -538,7 +538,7 @@ a {
     align-self: center;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       height: 112px;
@@ -549,7 +549,7 @@ a {
       border: 1px solid $colorLightGrey;
     }
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       height: 100%;
@@ -567,9 +567,9 @@ a {
     margin: auto;
     overflow: hidden;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
-      transition: 0.3s;
+      transition: 0.3s ease-out;
       width: 0;
       bottom: 0;
       background: rgba(35, 37, 56, 0.25);
@@ -577,7 +577,7 @@ a {
       left: -20%;
       transform: skewX(15deg);
       z-index: 1;
-      mix-blend-mode: multiply;
+      mix-blend-mode: hard-light;
     }
     &:hover::after {
       width: 140%;
@@ -585,7 +585,7 @@ a {
     & img {
       width: 100%;
       max-width: 100%;
-      transition: all 0.25s;
+      transition: 0.3s ease-out;
       display: block;
       height: auto;
       transform: scale(1);
@@ -637,7 +637,7 @@ a {
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       width: 16px;
       height: 16px;
       left: -22px;
@@ -685,7 +685,7 @@ a {
     z-index: -1;
     align-content: end;
     overflow: hidden;
-    background: url(../images/background-mid-01.svg) no-repeat center center;
+    background: url(../images/background-header.svg) no-repeat center center;
     background-size: cover;
   }
 
@@ -704,8 +704,7 @@ a {
   }
 
   &__image {
-    box-shadow: 0px 24px 48px -24px rgba(0, 0, 0, 0.2),
-      0px 40px 80px -16px rgba(73, 73, 73, 0.15);
+    box-shadow: 0px 24px 48px -24px rgba(0, 0, 0, 0.2), 0px 40px 80px -16px rgba(73, 73, 73, 0.15);
     border-radius: 4px;
   }
 }
@@ -726,7 +725,7 @@ a {
     transform: skewY(-8deg);
     transform-origin: bottom right;
     z-index: -1;
-    background: url(../images/background-header.svg) no-repeat center center;
+    background: url(../images/background-footer.svg) no-repeat center center;
     background-size: cover;
   }
 
@@ -755,7 +754,7 @@ a {
     position: relative;
     padding-bottom: 20px;
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       height: 5px;
@@ -774,7 +773,7 @@ a {
     position: relative;
     flex-grow: 1;
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       height: 5px;
