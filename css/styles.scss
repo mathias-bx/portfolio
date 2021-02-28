@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 165%;
   color: #383e4e;
@@ -47,7 +47,7 @@ h2 {
   line-height: 135%;
   letter-spacing: -0.8px;
   text-transform: uppercase;
-  font-family: Khand, Roboto;
+  font-family: Khand, Roboto, Arial, Helvetica;
   letter-spacing: 0.5px;
 }
 
@@ -58,7 +58,7 @@ h3 {
   color: #232538;
   letter-spacing: -0.5px;
   text-transform: uppercase;
-  font-family: Khand, Roboto;
+  font-family: Khand, Roboto, Arial, Helvetica;
   letter-spacing: 0.5px;
 
   &::before {
@@ -501,7 +501,7 @@ a {
     letter-spacing: 0.5px;
     color: #232538;
     text-transform: uppercase;
-    font-family: Khand, Roboto;
+    font-family: Khand, Roboto, Arial, Helvetica;
   }
 
   &__copy {
