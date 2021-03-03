@@ -684,7 +684,6 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: #e8eaee;
     transform: skewY(-6deg);
     transform-origin: top left;
     z-index: -1;
@@ -706,10 +705,6 @@ a {
 .headercasestudy {
   &__section {
     margin-top: 16px;
-  }
-
-  &__image {
-    box-shadow: 0px 24px 48px -24px rgba(0, 0, 0, 0.2), 0px 40px 80px -16px rgba(73, 73, 73, 0.15);
   }
 }
 
