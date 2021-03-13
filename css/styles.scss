@@ -282,9 +282,10 @@ a {
 
 .btn-container {
   display: flex;
-  margin-left: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   align-items: center;
-
+  box-sizing: border-box;
   .btn:not(:first-of-type) {
     margin-left: 10px;
   }
@@ -302,6 +303,7 @@ a {
   position: relative;
   overflow: hidden;
   transition: background 0.3s ease-out;
+  text-align: center;
   &::after {
     position: absolute;
     transition: 0.3s ease-out;
@@ -860,5 +862,17 @@ a {
 
   .section__copy {
     padding-right: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-container {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    &--primary {
+      width: 100%;
+    }
   }
 }
