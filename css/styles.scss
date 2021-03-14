@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Segoe UI, Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 165%;
   color: #383e4e;
@@ -613,8 +613,11 @@ a {
 
   &__item {
     font-size: 14px;
-    position: relative;
-    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 8px;
+    }
   }
 
   &__icon {
