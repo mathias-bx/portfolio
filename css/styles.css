@@ -78,7 +78,6 @@ h4 {
   position: relative;
   color: #232538;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
 }
 
 h4::before {
