@@ -1,6 +1,6 @@
 ### Mathias Bx - Portfolio
 
-Here's my portfolio as a Product Designer. I'm currently working remotely for Echobox.
+Here's my portfolio as a Product Designer. I'm currently working in London for Preqin.
 
 If you wish to contact me, feel free to do so at mathiasbx@outlook.com
 
