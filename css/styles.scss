@@ -523,12 +523,8 @@ a {
   }
 }
 
-.section-concept {
-  margin-top: 64px;
-
-  &__image {
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
-  }
+.border__image {
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .introduction {
@@ -669,6 +665,7 @@ a {
       }
     }
   }
+
 }
 
 .header-home {
