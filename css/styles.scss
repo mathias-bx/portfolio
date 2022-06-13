@@ -1,5 +1,6 @@
 $colorOrange: #ff9c27;
 $colorPurple: #9891fb;
+$colorPreqin: #0084C0;
 $colorLightGrey: #ebebee;
 
 body {
@@ -243,6 +244,24 @@ ol li::before {
   }
 }
 
+.highlight--preqin {
+  h3::before {
+    background-color: $colorPreqin;
+  }
+
+  h4::before {
+    background-color: $colorPreqin;
+  }
+
+  h5 {
+    color: $colorPreqin;
+  }
+
+  svg {
+    color: $colorPreqin;
+  }
+}
+
 .highlight--purple {
   h3::before {
     background-color: $colorPurple;
@@ -455,9 +474,59 @@ a {
   &__listitem {
     margin-bottom: 8px;
   }
+  
   &__header-detail {
     display: flex;
   }
+
+  &__case-study {
+    gap: 24px;
+    display: grid;
+  }
+  &__case-study-copy {
+    padding: 16px 16px 16px 0;
+    display: grid;
+    gap: 8px;
+  }
+
+  &__case-study-item {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.15s ease-out;
+    p {
+      font-weight: 400;
+      color: #232538;
+    }
+    img {
+      object-fit: cover;
+    }
+    &:hover {
+      opacity: .8;
+      transition: opacity 0.15s ease-out;
+      cursor: pointer;
+    }
+  }
+  &__case-study-coming-soon {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    h5 {
+      padding-right: 0;
+    }
+  }
+}
+
+.label {
+  padding: 4px 12px;
+  background: rgba(35, 37, 56, 0.08);
+  border-radius: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #232538;
 }
 
 .section-casestudy {
@@ -523,8 +592,9 @@ a {
   }
 }
 
-.border__image {
-    border: 1px solid rgba(0, 0, 0, 0.08);
+.border__default {
+    outline: 1px solid #EBEBEB;
+    outline-offset: -1px;
 }
 
 .introduction {

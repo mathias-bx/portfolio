@@ -251,6 +251,22 @@ ol li::before {
   color: #ff9c27;
 }
 
+.highlight--preqin h3::before {
+  background-color: #0084C0;
+}
+
+.highlight--preqin h4::before {
+  background-color: #0084C0;
+}
+
+.highlight--preqin h5 {
+  color: #0084C0;
+}
+
+.highlight--preqin svg {
+  color: #0084C0;
+}
+
 .highlight--purple h3::before {
   background-color: #9891fb;
 }
@@ -489,6 +505,76 @@ a {
   display: flex;
 }
 
+.section__case-study {
+  gap: 24px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.section__case-study-copy {
+  padding: 16px 16px 16px 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 8px;
+}
+
+.section__case-study-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+}
+
+.section__case-study-item p {
+  font-weight: 400;
+  color: #232538;
+}
+
+.section__case-study-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section__case-study-item:hover {
+  opacity: .8;
+  -webkit-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+  cursor: pointer;
+}
+
+.section__case-study-coming-soon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 8px;
+}
+
+.section__case-study-coming-soon h5 {
+  padding-right: 0;
+}
+
+.label {
+  padding: 4px 12px;
+  background: rgba(35, 37, 56, 0.08);
+  border-radius: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #232538;
+}
+
 .section-casestudy {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -554,8 +640,9 @@ a {
   max-width: 320px;
 }
 
-.border__image {
-  border: 1px solid rgba(0, 0, 0, 0.08);
+.border__default {
+  outline: 1px solid #EBEBEB;
+  outline-offset: -1px;
 }
 
 .introduction {
