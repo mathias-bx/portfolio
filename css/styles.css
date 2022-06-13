@@ -526,8 +526,8 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: opacity 0.15s ease-out;
-  transition: opacity 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }
 
 .section__case-study-item p {
@@ -541,9 +541,9 @@ a {
 }
 
 .section__case-study-item:hover {
-  opacity: .8;
-  -webkit-transition: opacity 0.15s ease-out;
-  transition: opacity 0.15s ease-out;
+  outline-color: #232538;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
   cursor: pointer;
 }
 

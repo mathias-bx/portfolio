@@ -492,7 +492,7 @@ a {
   &__case-study-item {
     display: flex;
     flex-direction: column;
-    transition: opacity 0.15s ease-out;
+    transition: all 0.15s ease-out;
     p {
       font-weight: 400;
       color: #232538;
@@ -501,8 +501,8 @@ a {
       object-fit: cover;
     }
     &:hover {
-      opacity: .8;
-      transition: opacity 0.15s ease-out;
+      outline-color: #232538;
+      transition: all 0.15s ease-out;
       cursor: pointer;
     }
   }
